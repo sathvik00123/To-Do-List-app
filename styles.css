@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,500&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to left top, rgb(12, 7, 2), #174850);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    margin: 5rem;
+    width: 30%;
+    min-height: 100px;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.heading img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.heading img:hover{
+    opacity: 0.8;
+}
+
+.heading h2{
+    margin-right: 1rem;
+    text-shadow: 0.1rem 0.1rem 0.01rem rgba(0,0,0,0.3);
+}
+
+.heading{
+    display: flex;
+    margin-bottom : 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+
+}
+
+.task-bar{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(138, 116, 116, 0.171);
+    border-radius: 20rem;
+    padding: 1rem;
+}
+
+.task-input{
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.btn{
+    background: orange;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20rem;
+    margin: -1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: white;
+    transition: ease 200ms;
+    outline: none;
+}
+
+.btn:hover{
+    color: orange;
+    border: 0.2rem solid orange;
+    background: white;
+}
+
+.list-container{
+    margin : 2rem;
+    min-height: 300px;
+    position: relative;
+}
+
+ul li{
+    list-style : none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom : 1rem;
+}
+
+ul li::before{   /* pseudo element  */
+    content: "";
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url('./images/unchecked.jpg');
+    background-size: cover;
+    background-position: center;
+    left: -2rem;
+}
+
+ul li.checked{
+    color: black;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url('./images/check.jpg');
+}
+
+
+ul li span{
+    position: absolute;
+    right: 0;
+    padding: .3rem;
+    width: 1rem;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: #075f6c41;
+    border-radius: 30%;
+}
+
+
+
